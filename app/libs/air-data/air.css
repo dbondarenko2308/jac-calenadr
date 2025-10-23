@@ -62,9 +62,6 @@
   background: var(--adp-cell-background-color-hover)
 }
 
-.air-datepicker-cell.-current- {
-  color: var(--adp-color-current-date)
-}
 
 .air-datepicker-cell.-current-.-focus- {
   color: var(--adp-color)
