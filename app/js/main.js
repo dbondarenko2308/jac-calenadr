@@ -37,35 +37,9 @@ $(document).ready(function() {
 		$text.toggleClass('active', $(this).is(':checked'))
 	})
 
-	$('.calendar__top').on('click', function() {
-		var parent = $(this).parent()
-		var block = parent.find('.calendar-block')
-
-		block.toggleClass('active')
-
-		var crossSvg = `
-        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M37.5 12.5L12.5 37.5" stroke="#A1A5AB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M12.5 12.5L37.5 37.5" stroke="#A1A5AB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-    `
-
-		var defaultSvg = `
-        <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 11.6667H25M19.6667 1V6.33333M6.33333 1V6.33333M6.83333 16.3533H8.204M17.796 16.3533H19.1667M12.3147 16.3533H13.6853M6.83333 20.4653H8.204M17.796 20.4653H19.1667M12.3147 20.4653H13.6853M19.6667 3.66667H6.33333C4.91885 3.66667 3.56229 4.22857 2.5621 5.22876C1.5619 6.22896 1 7.58551 1 9V20.6667C1 22.0812 1.5619 23.4377 2.5621 24.4379C3.56229 25.4381 4.91885 26 6.33333 26H19.6667C21.0812 26 22.4377 25.4381 23.4379 24.4379C24.4381 23.4377 25 22.0812 25 20.6667V9C25 7.58551 24.4381 6.22896 23.4379 5.22876C22.4377 4.22857 21.0812 3.66667 19.6667 3.66667Z" stroke="#07377E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-    `
-
-		if (block.hasClass('active')) {
-			$(this).find('svg').replaceWith(crossSvg)
-		} else {
-			$(this).find('svg').replaceWith(defaultSvg)
-		}
-	})
-
 	$('.page-form__mobile').on('click', function() {
 		var parent = $(this).parent()
-		var block = parent.find('.page-form__items')
+		var block = parent.find('.page-form__open')
 
 		block.toggleClass('active')
 
@@ -93,5 +67,127 @@ $(document).ready(function() {
 
 	$('.page-news__top--item svg').on('click', function() {
 		$(this).parent().remove()
+	})
+
+	$('.select2').select2({
+		minimumResultsForSearch: 1
+	})
+
+	$('.field input, .field-area textarea').keyup(function() {
+		const label = $(this).parent().find('.field__label')
+		const span = $(this).parent().find('.field__error')
+		if ($(this).val().length > 0) {
+			$(label).addClass('top')
+			$(this).removeClass('error')
+			$(span).hide()
+		} else {
+			$(label).removeClass('top')
+		}
+	})
+
+	$('[data-fancybox]').fancybox({
+		touch: false
+	})
+
+	$('body').on('click', '.file-item svg', function(event) {
+		event.preventDefault()
+		event.stopPropagation()
+
+		let fileWrapper = $(this).closest('.field-file')
+		fileWrapper.find('.file-item').remove()
+		fileWrapper.find('.field-file input').val('')
+		fileWrapper.find('.field-file__info--text').show()
+		fileWrapper.find('.file-error').hide()
+		fileWrapper.find('.field-file__icon').show()
+	})
+
+	$(document).on('select2:open', () => {
+		$('body').addClass('select-close')
+	})
+
+	$(document).on('select2:close', () => {
+		$('body').removeClass('select-close')
+	})
+
+	$('[data-nav-item]').on('click', function() {
+		if (!$(this).hasClass('active')) {
+			var index = $(this).index()
+			$(this).addClass('active').siblings().removeClass('active')
+			$('[data-nav-content]').removeClass('active').eq(index).addClass('active')
+		}
+		return false
+	})
+
+	const input = document.querySelector('input[type=number]')
+
+	input.addEventListener('input', () => {
+		input.value = input.value.replace(/[^0-9]/g, '')
+	})
+
+	$(function() {
+		const $input = $('.mask')
+		const $countryLabel = $('.phone-country')
+
+		const masks = [
+			{
+				id: 'ru_kz',
+				mask: '+{7} (000) 000-00-00',
+				country: 'Россия / Казахстан',
+				starts: ['7']
+			},
+			{
+				id: 'by',
+				mask: '+{375} (00) 000-00-00',
+				country: 'Беларусь',
+				starts: ['375']
+			}
+		]
+
+		const mask = IMask($input[0], {
+			mask: masks.map(m => m.mask),
+			dispatch: function(appended, dynamicMasked) {
+				const value = (dynamicMasked.value + appended).replace(/\D/g, '')
+				for (let m of masks) {
+					for (let s of m.starts) {
+						if (value.indexOf(s) === 0) {
+							return dynamicMasked.compiledMasks.find(cm => cm.mask === m.mask)
+						}
+					}
+				}
+				return dynamicMasked.compiledMasks.find(cm => cm.mask === masks[0].mask)
+			}
+		})
+
+		function updateCountryLabel() {
+			const curMask = mask.masked.currentMask && mask.masked.currentMask.mask
+			const found = masks.find(m => m.mask === curMask)
+			$countryLabel.text(found ? found.country : '')
+		}
+
+		mask.on('accept', () => {
+			updateCountryLabel()
+		})
+
+		$input.on('blur', function() {
+			const isComplete = mask.masked.isComplete
+			if (!isComplete) {
+				$input.addClass('error')
+				if (!$input.next('.phone-error').length) {
+					$input.after(
+						'<div class="phone-error" style="color:#d00; font-size:12px; margin-top:4px;">Неполный номер</div>'
+					)
+				}
+			} else {
+				$input.removeClass('error')
+				$input.next('.phone-error').remove()
+			}
+		})
+
+		$input.on('focus', function() {
+			$input.removeClass('error')
+			$input.next('.phone-error').remove()
+		})
+
+		updateCountryLabel()
 	})
 })

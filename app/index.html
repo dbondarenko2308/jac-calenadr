@@ -9,587 +9,764 @@
       maximum-scale=1"
     />
     <link rel="stylesheet" href="libs/air-data/air.css" />
+    <link rel="stylesheet" href="libs/select2/select2.min.css" />
+    <link rel="stylesheet" href="libs/inputTel/inputTel.css" />
+
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <div class="page-cel">
-      <div class="container">
-        <div class="page-cel__inner">
-          <h1 class="page-cel__title">Учебный центр ГК “АЯК”</h1>
-          <div class="page-cel__top">
-            <div class="page-cel__logo">
-              <img src="images/logo-page.png" alt="" />
+    <div class="wrapper-calendar">
+      <div class="page-cel">
+        <div class="container">
+          <div class="page-cel__inner">
+            <h1 class="page-cel__title">Учебный центр ГК “АЯК”</h1>
+            <div class="page-cel__top">
+              <div class="page-cel__logo">
+                <img src="images/logo-page.png" alt="" />
+              </div>
+
+              <div class="page-cel__name">
+                календарь мероприятий Учебного центра ГК “АЯК”
+              </div>
             </div>
 
-            <div class="page-cel__name">
-              календарь мероприятий Учебного центра ГК “АЯК”
+            <div class="page-cel__items">
+              <div class="page-cel__item">
+                <div class="page-cel__sub">Место проведения семинаров:</div>
+
+                <div class="page-cel__text">
+                  Учебный центр ГК "АЯК" <br />
+                  г. Москва, 2-я ул. Синичкина, 9А, <br />
+                  БЦ "Синица Плаза"
+                </div>
+              </div>
+
+              <div class="page-cel__item">
+                <div class="page-cel__sub">формат обучения:</div>
+
+                <div class="page-cel__text">
+                  <b> Очное участие.</b> Количество мест ограничено. <br />
+                  <br />
+                  <b>Онлайн-трансляция.</b> Ссылка отправляется всем
+                  зарегистрированным за 1 час до начала семинара.
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="page-cel__items">
-            <div class="page-cel__item">
-              <div class="page-cel__sub">Место проведения семинаров:</div>
+      <div class="page-news">
+        <div class="container">
+          <div class="page-news__inner">
+            <div class="page-news__top desktop">
+              <div class="page-news__top--item">
+                <span>20.11</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 3L3 17"
+                    stroke="#07377E"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 3L17 17"
+                    stroke="#07377E"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="page-news__top--item">
+                <span>Сплит-системы (RAC\PAC\Multi)</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 3L3 17"
+                    stroke="#07377E"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 3L17 17"
+                    stroke="#07377E"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="page-news__top--item">
+                <span>Сервис, обслуживание и ремонт</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 3L3 17"
+                    stroke="#07377E"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 3L17 17"
+                    stroke="#07377E"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="page-news__top--item">
+                <span>VRF</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 3L3 17"
+                    stroke="#07377E"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 3L17 17"
+                    stroke="#07377E"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="page-news__top--item">
+                <span>20.11</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 3L3 17"
+                    stroke="#07377E"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 3L17 17"
+                    stroke="#07377E"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
 
-              <div class="page-cel__text">
-                Учебный центр ГК "АЯК" <br />
-                г. Москва, 2-я ул. Синичкина, 9А, <br />
-                БЦ "Синица Плаза"
+              <div class="page-news__remove">
+                <span>Сбросить все фильтры</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 3L3 17"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 3L17 17"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </div>
             </div>
 
-            <div class="page-cel__item">
-              <div class="page-cel__sub">формат обучения:</div>
+            <div class="page-news__content">
+              <div class="page-filter">
+                <div class="page-form">
+                  <form action="#">
+                    <div class="page-form__mobile">
+                      <span> Семинары по фильтру</span>
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M27.5 3.75H2.5L12.5 15.575V23.75L17.5 26.25V15.575L27.5 3.75Z"
+                          stroke="#07377E"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="page-form__open">
+                      <div class="page-form__items">
+                        <div class="page-form__item">
+                          <div class="page-form__top">тип оборудования:</div>
 
-              <div class="page-cel__text">
-                <b> Очное участие.</b> Количество мест ограничено. <br />
-                <br />
-                <b>Онлайн-трансляция.</b> Ссылка отправляется всем
-                зарегистрированным за 1 час до начала семинара.
+                          <div class="page-form__labels">
+                            <label class="checkbox">
+                              <span class="checkbox__inner">
+                                <input type="checkbox" />
+                                <span></span>
+                              </span>
+                              <span class="checkbox__text"
+                                >Сплит-системы (RAC\PAC\Multi)
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <span class="checkbox__inner">
+                                <input type="checkbox" />
+                                <span></span>
+                              </span>
+                              <span class="checkbox__text">VRF </span>
+                            </label>
+                            <label class="checkbox">
+                              <span class="checkbox__inner">
+                                <input type="checkbox" />
+                                <span></span>
+                              </span>
+                              <span class="checkbox__text"
+                                >Сплит-системы (RAC\PAC\Multi)
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <span class="checkbox__inner">
+                                <input type="checkbox" />
+                                <span></span>
+                              </span>
+                              <span class="checkbox__text">VRF </span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="page-form__item">
+                          <div class="page-form__top">тема семинара:</div>
+
+                          <div class="page-form__labels">
+                            <label class="checkbox">
+                              <span class="checkbox__inner">
+                                <input type="checkbox" />
+                                <span></span>
+                              </span>
+                              <span class="checkbox__text"
+                                >Сплит-системы (RAC\PAC\Multi)
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <span class="checkbox__inner">
+                                <input type="checkbox" />
+                                <span></span>
+                              </span>
+                              <span class="checkbox__text">VRF </span>
+                            </label>
+                            <label class="checkbox">
+                              <span class="checkbox__inner">
+                                <input type="checkbox" />
+                                <span></span>
+                              </span>
+                              <span class="checkbox__text"
+                                >Сплит-системы (RAC\PAC\Multi)
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <span class="checkbox__inner">
+                                <input type="checkbox" />
+                                <span></span>
+                              </span>
+                              <span class="checkbox__text">VRF </span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="page-form__item">
+                          <div class="page-form__top">бренды:</div>
+
+                          <div class="page-form__labels">
+                            <label class="checkbox">
+                              <span class="checkbox__inner">
+                                <input type="checkbox" />
+                                <span></span>
+                              </span>
+                              <span class="checkbox__text">MDV </span>
+                            </label>
+                            <label class="checkbox">
+                              <span class="checkbox__inner">
+                                <input type="checkbox" />
+                                <span></span>
+                              </span>
+                              <span class="checkbox__text">EK</span>
+                            </label>
+                            <label class="checkbox">
+                              <span class="checkbox__inner">
+                                <input type="checkbox" />
+                                <span></span>
+                              </span>
+                              <span class="checkbox__text"
+                                >Mitsubishi Heavy Industries
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <span class="checkbox__inner">
+                                <input type="checkbox" />
+                                <span></span>
+                              </span>
+                              <span class="checkbox__text">THAICON </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="calendar">
+                        <div id="calendar"></div>
+                      </div>
+                      <a href="#" class="page-form__item--btn"> Показать </a>
+                      <button class="calendar__btn">
+                        Показать все семинары
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="page-news__top mobile">
+                  <div class="page-news__top--item">
+                    <span>20.11</span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 3L3 17"
+                        stroke="#07377E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3 3L17 17"
+                        stroke="#07377E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="page-news__top--item">
+                    <span>Сплит-системы (RAC\PAC\Multi)</span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 3L3 17"
+                        stroke="#07377E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3 3L17 17"
+                        stroke="#07377E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="page-news__top--item">
+                    <span>Сервис, обслуживание и ремонт</span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 3L3 17"
+                        stroke="#07377E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3 3L17 17"
+                        stroke="#07377E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="page-news__top--item">
+                    <span>VRF</span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 3L3 17"
+                        stroke="#07377E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3 3L17 17"
+                        stroke="#07377E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="page-news__top--item">
+                    <span>20.11</span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 3L3 17"
+                        stroke="#07377E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3 3L17 17"
+                        stroke="#07377E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="page-news__remove">
+                    <span>Сбросить все фильтры</span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 3L3 17"
+                        stroke="white"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3 3L17 17"
+                        stroke="white"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
+
+              <div class="page-news__grids">
+                <div class="page-news__grid">
+                  <div class="page-news__grid--label">
+                    12 НОЯБРЯ (среда) <br />
+                    <br />
+                    10:00 - 13:00
+                  </div>
+
+                  <div class="page-news__grid--name">
+                    Монтаж и ПНР VRF-систем MDV. 1 и 2 часть.
+                  </div>
+
+                  <div class="page-news__grid--content">
+                    <p>
+                      <b> Спикер:</b>
+                      Павел Майоров, технический директор отдела управления
+                      продуктом
+                    </p>
+
+                    <p>
+                      <b> О семинаре:  </b>
+                      Павел проведёт детальный разбор процесса установки
+                      сплит-систем и аксессуаров MDV. В ходе презентации будет
+                      представлена пошаговая инструкция по монтажу с подробным
+                      описанием каждого этапа работы. Участники получат полное
+                      представление о последовательности монтажных процедур и
+                      ключевых особенностях установки оборудования. Особое
+                      внимание будет уделено последним новинкам компании и
+                      запатентованным технологическим решениям, которые выделяют
+                      MDV среди других производителей климатического
+                      оборудования.
+                    </p>
+                  </div>
+
+                  <a href="#wrapper-modal" data-fancybox class="page-news__btn"
+                    >Зарегистрироваться</a
+                  >
+                </div>
+                <div class="page-news__grid">
+                  <div class="page-news__grid--label">
+                    12 НОЯБРЯ (среда) <br />
+                    <br />
+                    10:00 - 13:00
+                  </div>
+
+                  <div class="page-news__grid--name">
+                    Монтаж и ПНР VRF-систем MDV. 1 и 2 часть.
+                  </div>
+
+                  <div class="page-news__grid--content">
+                    <p>
+                      <b> Спикер:</b>
+                      Павел Майоров, технический директор отдела управления
+                      продуктом
+                    </p>
+
+                    <p>
+                      <b> О семинаре:  </b>
+                      Павел проведёт детальный разбор процесса установки
+                      сплит-систем и аксессуаров MDV. В ходе презентации будет
+                      представлена пошаговая инструкция по монтажу с подробным
+                      описанием каждого этапа работы. Участники получат полное
+                      представление о последовательности монтажных процедур и
+                      ключевых особенностях установки оборудования. Особое
+                      внимание будет уделено последним новинкам компании и
+                      запатентованным технологическим решениям, которые выделяют
+                      MDV среди других производителей климатического
+                      оборудования.
+                    </p>
+                  </div>
+
+                  <a href="#" class="page-news__btn">Зарегистрироваться</a>
+                </div>
+              </div>
+
+              <!-- Тут есть скрытытй текст -->
+
+              <!-- <div class="page-news__empty">
+              К сожалению, по выбранным параметрам не нашлось обучений. Сбросьте все фильры и выберите, пожалуйста, другие параметры.
+            </div>
+             -->
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="page-news">
-      <div class="container">
-        <div class="page-news__inner">
-          <div class="page-news__top desktop">
-            <div class="page-news__top--item">
-              <span>20.11</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17 3L3 17"
-                  stroke="#07377E"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3 3L17 17"
-                  stroke="#07377E"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <div class="page-news__top--item">
-              <span>Сплит-системы (RAC\PAC\Multi)</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17 3L3 17"
-                  stroke="#07377E"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3 3L17 17"
-                  stroke="#07377E"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <div class="page-news__top--item">
-              <span>Сервис, обслуживание и ремонт</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17 3L3 17"
-                  stroke="#07377E"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3 3L17 17"
-                  stroke="#07377E"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <div class="page-news__top--item">
-              <span>VRF</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17 3L3 17"
-                  stroke="#07377E"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3 3L17 17"
-                  stroke="#07377E"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <div class="page-news__top--item">
-              <span>20.11</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17 3L3 17"
-                  stroke="#07377E"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3 3L17 17"
-                  stroke="#07377E"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+    <!-- Modal-content -->
 
-            <div class="page-news__remove">
-              <span>Сбросить все фильтры</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17 3L3 17"
-                  stroke="white"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3 3L17 17"
-                  stroke="white"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+    <div class="wrapper-modal" id="wrapper-modal">
+      <div class="wrapper-modal__close" data-fancybox-close>
+        <img src="images/close.svg" alt="" />
+      </div>
+      <div class="wrapper-form">
+        <form action="#">
+          <div class="form-content">
+            <h3 class="form-content__title title-margin">
+              регистрация на семинар
+            </h3>
+
+            <div class="form-content__top">
+              <div class="form-content__info center">
+                <div class="form-content__label">Выбор страны*</div>
+                <label class="field field-select" data-field="REGION">
+                  <select
+                    class="select2"
+                    data-placeholder="Монтаж и ПНР VRF-систем MDV. 1 и 2 часть."
+                  >
+                    <option value=""></option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                  </select>
+                </label>
+                <div class="form-content__label">Формат участия*</div>
+                <label class="field field-select" data-field="REGION">
+                  <select
+                    class="select2"
+                    data-placeholder="Выберите формат участия*"
+                  >
+                    <option value=""></option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                    <option value="AL">Белгородская область</option>
+                    <option value="AL">Брянская область</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <input type="text" />
+                  <span class="field__label">Название компании*</span>
+                </label>
+
+                <label class="field">
+                  <input type="number" />
+                  <span class="field__label">ИНН</span>
+                </label>
+                <label class="field field--error">
+                  <input type="text" />
+                  <span class="field__label">ФИО*</span>
+                </label>
+                <label class="field">
+                  <input type="text" />
+                  <span class="field__label">Email*</span>
+                </label>
+                <label class="field">
+                  <input type="text" class="mask" />
+                  <span class="field__label">Телефон</span>
+                </label>
+
+                <label class="field field-area">
+                  <textarea></textarea>
+                  <span class="field__label">Сообщение</span>
+                </label>
+
+                <div class="captcha captcha-right desktop">
+                  <img src="images/captcha.png" alt="" />
+                </div>
+
+                <div class="captcha mobile">
+                  <img src="images/captcha.png" alt="" />
+                </div>
+
+                <div class="form-content__foot">
+                  <a
+                    href="#thanks"
+                    data-fancybox
+                    type="submit"
+                    class="form-content__btn btn btn-red"
+                  >
+                    <img src="images/arrow-btn.svg" alt="" />
+                    Отправить
+                  </a>
+                  <label class="checkbox">
+                    <span class="checkbox__inner">
+                      <input type="checkbox" checked />
+                      <span></span>
+                    </span>
+                    <span class="checkbox__text"
+                      >Нажимая кнопку, я принимаю
+                      <a href="#">условия соглашения</a>
+                    </span>
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
+        </form>
+      </div>
+    </div>
 
-          <div class="page-news__content">
-            <div class="page-filter">
-              <div class="page-form">
-                <form action="#">
-                  <div class="page-form__mobile">
-                    <span> Семинары по фильтру</span>
-                    <svg
-                      width="30"
-                      height="30"
-                      viewBox="0 0 30 30"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M27.5 3.75H2.5L12.5 15.575V23.75L17.5 26.25V15.575L27.5 3.75Z"
-                        stroke="#07377E"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="page-form__items">
-                    <div class="page-form__item">
-                      <div class="page-form__top">тип оборудования:</div>
+    <!-- Отбивка для все модалок -->
 
-                      <div class="page-form__labels">
-                        <label class="checkbox">
-                          <span class="checkbox__inner">
-                            <input type="checkbox" />
-                            <span></span>
-                          </span>
-                          <span class="checkbox__text"
-                            >Сплит-системы (RAC\PAC\Multi)
-                          </span>
-                        </label>
-                        <label class="checkbox">
-                          <span class="checkbox__inner">
-                            <input type="checkbox" />
-                            <span></span>
-                          </span>
-                          <span class="checkbox__text">VRF </span>
-                        </label>
-                        <label class="checkbox">
-                          <span class="checkbox__inner">
-                            <input type="checkbox" />
-                            <span></span>
-                          </span>
-                          <span class="checkbox__text"
-                            >Сплит-системы (RAC\PAC\Multi)
-                          </span>
-                        </label>
-                        <label class="checkbox">
-                          <span class="checkbox__inner">
-                            <input type="checkbox" />
-                            <span></span>
-                          </span>
-                          <span class="checkbox__text">VRF </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="page-form__item">
-                      <div class="page-form__top">тема семинара:</div>
-
-                      <div class="page-form__labels">
-                        <label class="checkbox">
-                          <span class="checkbox__inner">
-                            <input type="checkbox" />
-                            <span></span>
-                          </span>
-                          <span class="checkbox__text"
-                            >Сплит-системы (RAC\PAC\Multi)
-                          </span>
-                        </label>
-                        <label class="checkbox">
-                          <span class="checkbox__inner">
-                            <input type="checkbox" />
-                            <span></span>
-                          </span>
-                          <span class="checkbox__text">VRF </span>
-                        </label>
-                        <label class="checkbox">
-                          <span class="checkbox__inner">
-                            <input type="checkbox" />
-                            <span></span>
-                          </span>
-                          <span class="checkbox__text"
-                            >Сплит-системы (RAC\PAC\Multi)
-                          </span>
-                        </label>
-                        <label class="checkbox">
-                          <span class="checkbox__inner">
-                            <input type="checkbox" />
-                            <span></span>
-                          </span>
-                          <span class="checkbox__text">VRF </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="page-form__item">
-                      <div class="page-form__top">бренды:</div>
-
-                      <div class="page-form__labels">
-                        <label class="checkbox">
-                          <span class="checkbox__inner">
-                            <input type="checkbox" />
-                            <span></span>
-                          </span>
-                          <span class="checkbox__text">MDV </span>
-                        </label>
-                        <label class="checkbox">
-                          <span class="checkbox__inner">
-                            <input type="checkbox" />
-                            <span></span>
-                          </span>
-                          <span class="checkbox__text">EK</span>
-                        </label>
-                        <label class="checkbox">
-                          <span class="checkbox__inner">
-                            <input type="checkbox" />
-                            <span></span>
-                          </span>
-                          <span class="checkbox__text"
-                            >Mitsubishi Heavy Industries
-                          </span>
-                        </label>
-                        <label class="checkbox">
-                          <span class="checkbox__inner">
-                            <input type="checkbox" />
-                            <span></span>
-                          </span>
-                          <span class="checkbox__text">THAICON </span>
-                        </label>
-                      </div>
-                    </div>
-
-                    <a href="#" class="page-form__item--btn"> Показать </a>
-                  </div>
-                </form>
-              </div>
-              <div class="calendar">
-                <div class="calendar__top">
-                  <span>Календарь мероприятий</span>
-                  <svg
-                    width="26"
-                    height="27"
-                    viewBox="0 0 26 27"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 11.6667H25M19.6667 1V6.33333M6.33333 1V6.33333M6.83333 16.3533H8.204M17.796 16.3533H19.1667M12.3147 16.3533H13.6853M6.83333 20.4653H8.204M17.796 20.4653H19.1667M12.3147 20.4653H13.6853M19.6667 3.66667H6.33333C4.91885 3.66667 3.56229 4.22857 2.5621 5.22876C1.5619 6.22896 1 7.58551 1 9V20.6667C1 22.0812 1.5619 23.4377 2.5621 24.4379C3.56229 25.4381 4.91885 26 6.33333 26H19.6667C21.0812 26 22.4377 25.4381 23.4379 24.4379C24.4381 23.4377 25 22.0812 25 20.6667V9C25 7.58551 24.4381 6.22896 23.4379 5.22876C22.4377 4.22857 21.0812 3.66667 19.6667 3.66667Z"
-                      stroke="#07377E"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div class="calendar-block">
-                  <div id="calendar"></div>
-
-                  <button class="calendar__btn">Показать все семинары</button>
-                </div>
-              </div>
-              <div class="page-news__top mobile">
-                <div class="page-news__top--item">
-                  <span>20.11</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 3L3 17"
-                      stroke="#07377E"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M3 3L17 17"
-                      stroke="#07377E"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div class="page-news__top--item">
-                  <span>Сплит-системы (RAC\PAC\Multi)</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 3L3 17"
-                      stroke="#07377E"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M3 3L17 17"
-                      stroke="#07377E"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div class="page-news__top--item">
-                  <span>Сервис, обслуживание и ремонт</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 3L3 17"
-                      stroke="#07377E"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M3 3L17 17"
-                      stroke="#07377E"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div class="page-news__top--item">
-                  <span>VRF</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 3L3 17"
-                      stroke="#07377E"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M3 3L17 17"
-                      stroke="#07377E"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div class="page-news__top--item">
-                  <span>20.11</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 3L3 17"
-                      stroke="#07377E"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M3 3L17 17"
-                      stroke="#07377E"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-
-                <div class="page-news__remove">
-                  <span>Сбросить все фильтры</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 3L3 17"
-                      stroke="white"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M3 3L17 17"
-                      stroke="white"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="page-news__grids">
-              <div class="page-news__grid">
-                <div class="page-news__grid--label">
-                  12 НОЯБРЯ (среда) <br />
-                  <br />
-                  10:00 - 13:00
-                </div>
-
-                <div class="page-news__grid--name">
-                  Монтаж и ПНР VRF-систем MDV. 1 и 2 часть.
-                </div>
-
-                <div class="page-news__grid--content">
-                  <p>
-                    <b> Спикер:</b>
-                    Павел Майоров, технический директор отдела управления
-                    продуктом
-                  </p>
-
-                  <p>
-                    <b> О семинаре:  </b>
-                    Павел проведёт детальный разбор процесса установки
-                    сплит-систем и аксессуаров MDV. В ходе презентации будет
-                    представлена пошаговая инструкция по монтажу с подробным
-                    описанием каждого этапа работы. Участники получат полное
-                    представление о последовательности монтажных процедур и
-                    ключевых особенностях установки оборудования. Особое
-                    внимание будет уделено последним новинкам компании и
-                    запатентованным технологическим решениям, которые выделяют
-                    MDV среди других производителей климатического оборудования.
-                  </p>
-                </div>
-
-                <a href="#" class="page-news__btn">Зарегистрироваться</a>
-              </div>
-              <div class="page-news__grid">
-                <div class="page-news__grid--label">
-                  12 НОЯБРЯ (среда) <br />
-                  <br />
-                  10:00 - 13:00
-                </div>
-
-                <div class="page-news__grid--name">
-                  Монтаж и ПНР VRF-систем MDV. 1 и 2 часть.
-                </div>
-
-                <div class="page-news__grid--content">
-                  <p>
-                    <b> Спикер:</b>
-                    Павел Майоров, технический директор отдела управления
-                    продуктом
-                  </p>
-
-                  <p>
-                    <b> О семинаре:  </b>
-                    Павел проведёт детальный разбор процесса установки
-                    сплит-систем и аксессуаров MDV. В ходе презентации будет
-                    представлена пошаговая инструкция по монтажу с подробным
-                    описанием каждого этапа работы. Участники получат полное
-                    представление о последовательности монтажных процедур и
-                    ключевых особенностях установки оборудования. Особое
-                    внимание будет уделено последним новинкам компании и
-                    запатентованным технологическим решениям, которые выделяют
-                    MDV среди других производителей климатического оборудования.
-                  </p>
-                </div>
-
-                <a href="#" class="page-news__btn">Зарегистрироваться</a>
-              </div>
-            </div>
-
-            <!-- Тут есть скрытытй текст -->
-
-            <!-- <div class="page-news__empty">
-              К сожалению, по выбранным параметрам не нашлось обучений. Сбросьте все фильры и выберите, пожалуйста, другие параметры.
-            </div>
-             -->
-          </div>
+    <div class="thanks thanks-modal" id="thanks" style="display: none">
+      <div class="thanks__close" data-fancybox-close>
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22.5 7.5L7.5 22.5"
+            stroke="#4F4F4F"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M7.5 7.5L22.5 22.5"
+            stroke="#4F4F4F"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div class="thanks__info">
+        <div class="thanks__title">
+          Вы зарегистрированы <br />
+          на обучение
+        </div>
+        <div class="thanks__text">
+          На указанный вами электронный адрес <br />
+          отправлено письмо-подтверждение
         </div>
       </div>
     </div>
 
     <script src="libs/jquery/jquery-3.2.1.min.js"></script>
     <script src="libs/air-data/air.js"></script>
+    <script src="libs/fancybox/jquery.fancybox.min.js"></script>
+    <script src="libs/select2/select2.min.js"></script>
+    <script src="libs/inputTel/inputTel.js"></script>
+    <script src="https://unpkg.com/imask"></script>
 
     <script src="js/main.js"></script>
   </body>
