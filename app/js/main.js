@@ -118,11 +118,7 @@ $(document).ready(function() {
 		return false
 	})
 
-	const input = document.querySelector('input[type=number]')
-
-	input.addEventListener('input', () => {
-		input.value = input.value.replace(/[^0-9]/g, '')
-	})
+	
 
 	$(function() {
 		const $input = $('.mask')
