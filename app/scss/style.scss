@@ -237,6 +237,10 @@ ul {
 }
 .menu > li {
   position: relative;
+
+  @media only screen and (max-width: 1300px) {
+    width: 100%;
+  }
 }
 .menu > li > a {
   display: block;
@@ -254,6 +258,7 @@ ul {
 
   @media only screen and (max-width: 1300px) {
     padding: 15px 0;
+    width: 100%;
   }
 }
 .menu > li:hover > a {
@@ -277,7 +282,7 @@ ul {
   display: none;
 
   @media only screen and (max-width: 1300px) {
-    position: relative;
+    position: absolute;
     max-width: 100%;
     left: 0;
     top: 0;
@@ -285,6 +290,10 @@ ul {
     height: auto;
     padding: 0;
     background: #fff;
+    z-index: 1000;
+    height: calc(100vh - 330px);
+    top: 132px;
+    overflow: auto;
   }
 
   &::before {
@@ -295,6 +304,11 @@ ul {
     content: '';
     display: block;
     width: 100%;
+
+    @media only screen and (max-width: 1300px) {
+      
+      display: none;
+    }
   }
 
   &.active {
@@ -319,11 +333,38 @@ ul {
     border: 0;
     height: auto;
     left: 0;
+    padding: 0;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &.first-lvl {
+      padding-right: 15px;
+    }
+  }
+}
+
+.menu-all-header__back {
+  display: none;
+
+  @media only screen and (max-width: 1300px) {
+    
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 30px;
+    font-size: 18px;
+    color: #f60;
+    font-weight: 500;
   }
 }
 
 .submenu li {
   margin-bottom: 20px;
+
+  @media only screen and (max-width: 1300px) {
+    margin-bottom: 15px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -338,6 +379,10 @@ ul {
   font-size: 18px;
   font-weight: 500;
   position: relative;
+
+  @media only screen and (max-width: 1300px) {
+    font-weight: 400;
+  }
 }
 .submenu li a:hover {
   color: #f36c21;
@@ -350,6 +395,13 @@ ul {
   @media only screen and (max-width: 1300px) {
     top: 0;
     left: 0;
+  }
+}
+
+.menu li.has-submenu > a.active::after {
+  @media only screen and (max-width: 1300px) {
+    
+    transform: rotate(-45deg) translateY(-75%);
   }
 }
 
@@ -367,7 +419,9 @@ ul {
   transform: rotate(45deg) translateY(-50%);
 
   @media only screen and (max-width: 1300px) {
-    
+
+    transform: rotate(135deg) translateY(100%);
+    right: -3px;
   }
 }
 

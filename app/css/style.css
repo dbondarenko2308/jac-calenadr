@@ -215,6 +215,11 @@ ul {
 .menu > li {
   position: relative;
 }
+@media only screen and (max-width: 1300px) {
+  .menu > li {
+    width: 100%;
+  }
+}
 
 .menu > li > a {
   display: block;
@@ -234,6 +239,7 @@ ul {
 @media only screen and (max-width: 1300px) {
   .menu > li > a {
     padding: 15px 0;
+    width: 100%;
   }
 }
 
@@ -258,7 +264,7 @@ ul {
 }
 @media only screen and (max-width: 1300px) {
   .menu-all-header {
-    position: relative;
+    position: absolute;
     max-width: 100%;
     left: 0;
     top: 0;
@@ -266,6 +272,10 @@ ul {
     height: auto;
     padding: 0;
     background: #fff;
+    z-index: 1000;
+    height: calc(100vh - 330px);
+    top: 132px;
+    overflow: auto;
   }
 }
 .menu-all-header::before {
@@ -276,6 +286,11 @@ ul {
   content: "";
   display: block;
   width: 100%;
+}
+@media only screen and (max-width: 1300px) {
+  .menu-all-header::before {
+    display: none;
+  }
 }
 .menu-all-header.active {
   display: block;
@@ -299,11 +314,38 @@ ul {
     border: 0;
     height: auto;
     left: 0;
+    padding: 0;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .submenu.first-lvl {
+    padding-right: 15px;
+  }
+}
+
+.menu-all-header__back {
+  display: none;
+}
+@media only screen and (max-width: 1300px) {
+  .menu-all-header__back {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 30px;
+    font-size: 18px;
+    color: #f60;
+    font-weight: 500;
   }
 }
 
 .submenu li {
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 1300px) {
+  .submenu li {
+    margin-bottom: 15px;
+  }
 }
 .submenu li:last-child {
   margin-bottom: 0;
@@ -317,6 +359,11 @@ ul {
   font-size: 18px;
   font-weight: 500;
   position: relative;
+}
+@media only screen and (max-width: 1300px) {
+  .submenu li a {
+    font-weight: 400;
+  }
 }
 
 .submenu li a:hover {
@@ -334,6 +381,12 @@ ul {
   }
 }
 
+@media only screen and (max-width: 1300px) {
+  .menu li.has-submenu > a.active::after {
+    transform: rotate(-45deg) translateY(-75%);
+  }
+}
+
 .menu li.has-submenu > a::after {
   border-width: 1px 1px 0 0;
   border-color: rgb(124, 124, 124);
@@ -347,6 +400,13 @@ ul {
   right: 0;
   transform: rotate(45deg) translateY(-50%);
 }
+@media only screen and (max-width: 1300px) {
+  .menu li.has-submenu > a::after {
+    transform: rotate(135deg) translateY(100%);
+    right: -3px;
+  }
+}
+
 .menu-lvl-first {
   position: inherit !important;
 }
