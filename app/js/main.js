@@ -117,10 +117,8 @@ $(document).ready(function() {
 	}
 }
 
-// Инициализация при загрузке
 initMenu()
 
-// И при изменении размера окна
 $(window).on('resize', function () {
 	initMenu()
 })
@@ -133,12 +131,10 @@ $(window).on('resize', function () {
 	$('.header__mobile').toggleClass('active')
 
 	if ($(this).hasClass('active')) {
-		// Меняем иконку на крестик
 		$icon.html(`<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
   <path d="M12.5 12.5L0.5 0.5M12.5 0.5L0.5 12.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`)
 	} else {
-		// Возвращаем бургер
 		$icon.html(`<svg xmlns="http://www.w3.org/2000/svg" width="19" height="11" viewBox="0 0 19 11" fill="none">
   <path d="M0.5 10.5H18.5M0.5 5.5H18.5M0.5 0.5H18.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`)

@@ -196,6 +196,19 @@ ul {
     position: relative;
     border-radius: 5px;
     cursor: pointer;
+    transition: 300ms;
+
+    &:hover {
+      background: #ff7416;
+    }
+
+    @media only screen and (max-width: 1300px) {
+      background: #7c7c7c;
+
+      &:hover {
+        background: #a1a1a1;
+      }
+    }
   }
 
   &__basket--number {
@@ -212,6 +225,10 @@ ul {
     justify-content: center;
     font-size: 9px;
     line-height: 1;
+
+    @media only screen and (max-width: 1300px) {
+      background: #f60;
+    }
   }
 }
 
@@ -240,6 +257,11 @@ ul {
 
   @media only screen and (max-width: 1300px) {
     width: 100%;
+    border-bottom: 1px solid #f60;
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 }
 .menu > li > a {
@@ -306,7 +328,6 @@ ul {
     width: 100%;
 
     @media only screen and (max-width: 1300px) {
-      
       display: none;
     }
   }
@@ -348,7 +369,6 @@ ul {
   display: none;
 
   @media only screen and (max-width: 1300px) {
-    
     display: flex;
     align-items: center;
     padding: 0 15px;
@@ -368,6 +388,17 @@ ul {
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.first-lvl > li {
+  @media only screen and (max-width: 1300px) {
+    border-bottom: 1px solid #7c7c7c;
+    padding-bottom: 15px;
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 }
 
@@ -400,7 +431,6 @@ ul {
 
 .menu li.has-submenu > a.active::after {
   @media only screen and (max-width: 1300px) {
-    
     transform: rotate(-45deg) translateY(-75%);
   }
 }
@@ -419,7 +449,6 @@ ul {
   transform: rotate(45deg) translateY(-50%);
 
   @media only screen and (max-width: 1300px) {
-
     transform: rotate(135deg) translateY(100%);
     right: -3px;
   }
@@ -431,6 +460,11 @@ ul {
   > a {
     &::after {
       transform: rotate(-225deg) translateY(100%) !important;
+
+      @media only screen and (max-width: 1300px) {
+        transform: rotate(45deg) translateY(-17%) !important;
+        right: 4px !important;
+      }
     }
   }
 }
